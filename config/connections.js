@@ -1,3 +1,4 @@
+const { createPromptModule } = require("inquirer");
 const mongoose = require("mongoose");
 
 mongoose.connect(
@@ -9,3 +10,5 @@ mongoose.connect(
 );
 
 mongoose.exports = mongoose.connection;
+
+module.exports = mongoose.connection;
