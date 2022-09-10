@@ -1,4 +1,3 @@
-const { createPromptModule } = require("inquirer");
 const mongoose = require("mongoose");
 
 mongoose.connect(
@@ -8,7 +7,5 @@ mongoose.connect(
         useUnifiedTopology: true,
     }
 );
-
-mongoose.exports = mongoose.connection;
 
 module.exports = mongoose.connection;
