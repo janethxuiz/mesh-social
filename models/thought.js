@@ -50,7 +50,7 @@ const ThoughSchema = new Schema(
         },
 
         username: {
-            type: String
+            type: String,
             required: true,
         },
 
