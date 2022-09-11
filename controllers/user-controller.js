@@ -47,5 +47,20 @@ const userController = {
         .catch((err) => res.json(err));
     },
 
+    updateUser({ params, body }, res) {
+        User.findOneAndUpdate({ _id: params.id }, body, {
+            new: true,
+            runValidators: true,
+        })
+        .then((dbUserData) => {
+            if (!dbUserData) {
+                res.status(404).json({ message: "No user witht this id"});
+                return;
+            }
+            res.json(dbUserData);
+        })
+        .catch((err) => res.json(err));
+    },
+
     
 }
