@@ -53,7 +53,7 @@ module.exports = (
     }
 
     const minutes = (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes();
-    const periodOfDay = Object.getHours() >= 12 ? 'pm' : 'am';
+    const periodOfDay = dateObj.getHours() >= 12 ? 'pm' : 'am';
     const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year} at ${hour}:${minutes} ${periodOfDay}`;
     return formattedTimeStamp;
 };
