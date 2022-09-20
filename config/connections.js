@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-    process.env.MONGODB_URI || "mongodb:",
+    process.env.MONGODB_URI || "mongodb://127.0.0.1:27017",
     {
-        useNewUrlPasrser: true,
-        useUnifiedTopology: true,
+        // useNewUrlPasrser: true,
+        useUnifiedTopology: true
     }
 );
 

@@ -108,15 +108,16 @@ const ThoughtController = {
         .catch((err) => res.json(err));
     },
 
-    addReaction({ params, body }, res) {
+    removeReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
             { $pull: { reactions: { reactionId: params.reactionId } } },
-            { new: true }
+            { new: true, runValidators: true }
         )
         .then((dbThoughtData) => res.json(dbThoughtData))
         .catch((err) => res.json(err));
     },
+
 };
 
 module.exports = ThoughtController;

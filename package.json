@@ -19,6 +19,6 @@
   "homepage": "https://github.com/janethxuiz/mesh-social#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mongoose": "^6.6.0"
+    "mongoose": "^6.6.1"
   }
 }
