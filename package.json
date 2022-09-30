@@ -1,7 +1,7 @@
 {
   "name": "mesh-social",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. It uses Express.js for routing, a MongoDB database, the Mongoose ODM, and Moment.js to format timestamps. The seed data is created using Insomnia.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,5 +20,6 @@
   "dependencies": {
     "express": "^4.18.1",
     "mongoose": "^6.6.1"
-  }
+  },
+  "devDependencies": {}
 }
